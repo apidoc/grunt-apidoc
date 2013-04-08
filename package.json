@@ -2,26 +2,37 @@
   "name": "grunt-apidoc",
   "version": "0.0.1",
   "description": "Grunt task to generate a REST-API-Documentation with apidoc",
+  "author": "Peter Rottmann <rottmann@inveris.de>",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/rottmann/grunt-apidoc.git"
+    "url": "https://github.com/inveris/grunt-apidoc.git"
   },
-  "main": "grunt.js",
+  "main": "Gruntfile.js",
+  "bin": "bin/apidoc",
+  "scripts": {
+    "test": "grunt test"
+  },
   "keywords": [
+    "grunt",
+    "plugin",
     "gruntplugin",
     "api",
     "apidoc",
-    "doc"
-    "documentation"
+    "doc",
+    "documentation",
+    "rest",
+    "restful"
   ],
-  "author": "Peter Rottmann <rottmann@inveris.de>",
-  "license": "MIT",
   "engines": {
     "node": ">= 0.8.0"
   },
   "dependencies": {
+    "apidoc": "~0.1.5"
   },
   "devDependencies": {
-    "grunt": "~0.4.0"
+    "grunt": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.1",
+    "grunt-contrib-clean": "~0.4.0"
   }
 }

@@ -1,59 +1,60 @@
-# Grunt apidoc
+# grunt-apidoc
+
+This plugin requires Grunt `~0.4.0`
 
 ## About
-[Cloud Files](https://github.com/) is Rackspace's cloud object storage. It's simliar to Amazon S3.
+Generates a REST-API-Documentation with [apidoc](http://apidocjs.com).
 
-This task is based on [grunt-s3](https://github.com/pifantastic/grunt-s3) by Aaron Forsander, 
-and uses the [pkgcloud](https://github.com/nodejitsu/pkgcloud) client by Nodejitsu. 
-
-This is all designed to work with Rackspace Cloud Files, and hasn't been tested on OpenStack Storage.
+Generated example documentation at [http://apidocjs.com/example/](http://apidocjs.com/example/)
 
 ## Installation
-1. `npm install grunt-cloudfiles --save-dev` (or manually add `grunt-cloudfiles` to your `package.json`).
-1. Add `grunt.loadNpmTasks('grunt-cloudfiles');` to `Gruntfile.js`
+1. `npm install grunt-apidoc --save-dev`
+2. Add `grunt.loadNpmTasks('grunt-apidoc');` to `Gruntfile.js`
 
 ## Configuration
 
 Add the task to your Gruntfile's **grunt.initConfig**:
 ```javascript
-cloudfiles: {
-  prod: {
-    'user': 'your Rackspace username',
-    'key': 'your Rackspace API key',
-    'upload': [{
-      'container': 'name of your Cloud Files container',
-      'src': 'source/static/**/*',
-      'dest': 'some/folder/',
-      'stripcomponents': 1
-    }]
+apidoc: {
+  myapp: {
+    src: "app/",
+    dest: "apidoc/"
   }
 }
 ```
 
-**Stripcomponents** (as in tar) will strip _X_ leading path parts from the source dir.
-In the example above, the file `source/static/js/app/main.js` 
-will be uploaded to `some/folder/static/js/app/main.js`, with the `source/` part being removed.
+Use only one src and one dest, apidoc search in subdirs for files with apidoc-parameters.
 
-Since this is a multi task, you can add **multiple targets** as needed. 
-In this example we only have `prod`, but you could have `staging`, etc.
+### Additional options
 
-Remember that your Rackspace **API key** is private. If you are commiting your Gruntfile 
-to a public repository, you probably want to store it in a separate local_config.json file.
+All `apidoc` options can be used within options-block, see [apidoc readme](https://github.com/inveris/apidoc/README.md) for details.
 
-For Rackspace UK users an additional configuration parameter `authUrl` is required to use the correct CDN url for UK accounts.
+**Example options:**
+
+**includeFilters**
+With `includeFilters` you can define which files apidoc should include, default `*.js`.
+
+**debug**
+Show verbose information.
 
 ```javascript
-cloudfiles: {
-  prod: {
-    ...
-    'authUrl': 'lon.identity.api.rackspacecloud.com',
-    ...
+apidoc: {
+  mypp: {
+    src: "app/",
+    dest: "apidoc/",
+    options: {
+      debug: true,
+      includeFilters: [ ".*\\.js$" ]
+    }
   }
 }
 ```
 
 ## Changelog
 
-### 0.0.1
+* `0.1.0` Initial release
 
-* Initial release
+## License
+Copyright (c) 2013 [inveris OHG](http://www.inveris.de)
+Author Peter Rottmann
+Licensed under the MIT license.

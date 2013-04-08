@@ -1,87 +1,57 @@
 /*
- * grunt-build-target
- * https://github.com/rottmann/grunt-build-target
+ * grunt-apidoc
+ * https://github.com/inveris/grunt-apidoc
  *
- * Copyright (c) 2013 Peter Rottmann
+ * Copyright (c) 2013 inveris OHG
+ * Author Peter Rottmann <rottmann@inveris.de>
  * Licensed under the MIT license.
  */
 
-'use strict';
+"use strict";
 
 module.exports = function(grunt) {
 
-  // Project configuration.
   grunt.initConfig({
     jshint: {
       all: [
-        'Gruntfile.js',
-        'tasks/**/*.js',
-        '<%= nodeunit.tests %>'
+        "Gruntfile.js",
+        "tasks/**/*.js"
       ],
       options: {
-        jshintrc: '.jshintrc'
+        jshintrc: ".jshintrc"
       }
     },
 
-    // Before generating any new files, remove any previously-created files.
+    // clear temporary dir.
     clean: {
-      tests: ['tmp']
-    },
+      test: ["tmp"]
+    }, // clean
 
-    // Configuration to be run (and then tested).
-    buildtarget: {
-      dev: {
+    // apidoc configuration.
+    apidoc: {
+      test: {
+        src: "test/fixtures",
+        dest: "tmp/",
         options: {
-          // customReplace: [], // custom functions
-          type: 'auto' // Values: custom, html, js, auto (depend on file extions .html or .js)
-        },
-        files: [{
-          expand: true,
-          cwd: "test/fixtures/src/",
-          src: ["**/*.*"],
-          dest: "tmp/",
-          rename: function(dest, matchedSrcPath) {
-            return dest + 'dev_' + matchedSrcPath;
-          }
-        }]
-      },
-      dist: {
-        options: {
-          // customReplace: [], // custom functions
-          type: 'auto' // Values: custom, html, js, auto (depend on file extions .html or .js)
-        },
-        files: [{
-          expand: true,
-          cwd: "test/fixtures/src/",
-          src: ["**/*.*"],
-          dest: "tmp/",
-          rename: function(dest, matchedSrcPath) {
-            return dest + 'dist_' + matchedSrcPath;
-          }
-        }]
+          debug: true,
+          includeFilters: [ ".*\\.js$" ]
+        }
       }
-    },
+    } // apidoc
 
-    // Unit tests.
-    nodeunit: {
-      tests: ['test/*_test.js']
-    }
+  }); // grunt.initConfig
 
-  });
+  // Load plugins tasks.
+  grunt.loadTasks("tasks");
 
-  // Actually load this plugin's task(s).
-  grunt.loadTasks('tasks');
+  // Tasks.
+  grunt.loadNpmTasks("grunt-contrib-jshint");
+  grunt.loadNpmTasks("grunt-contrib-clean");
 
-  // These plugins provide necessary tasks.
-  grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.loadNpmTasks('grunt-contrib-clean');
-  grunt.loadNpmTasks('grunt-contrib-nodeunit');
+  // Tasks: Default
+  grunt.registerTask('default', ["jshint"]);
 
-  // Whenever the "test" task is run, first clean the "tmp" dir, then run this
-  // plugin's task(s), then test the result.
-  grunt.registerTask('test', ['clean', 'buildtarget', 'nodeunit']);
+  // Tasks: Test
+  grunt.registerTask('test', ["clean", "apidoc"]);
 
-  // By default, lint and run all tests.
-  grunt.registerTask('default', ['jshint', 'test']);
-
-};
+}; // module.exports
