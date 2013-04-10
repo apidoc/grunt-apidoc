@@ -1,4 +1,4 @@
-/.settings/
-/.project
-/node_modules/
-/tmp/
+.settings/
+.project
+node_modules/
+tmp/
