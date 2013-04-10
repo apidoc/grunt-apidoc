@@ -2,6 +2,16 @@
 
 "use strict";
 
+/*
+ * grunt-apidoc
+ * https://github.com/apidoc/grunt-apidoc
+ * http://apidocjs.com
+ *
+ * Copyright (c) 2013 inveris OHG
+ * Author Peter Rottmann <rottmann@inveris.de>
+ * Licensed under the MIT license.
+ */
+
 // Modules.
 var path = require("path");
 var grunt = require("grunt");
@@ -18,7 +28,7 @@ grunt.help.queue = [
 ];
 
 grunt.help.content = function() {
-  grunt.log.writeln("grunt-init: Create REST-API-Documentation with apidoc. (v" + pkg.version + ")");
+  grunt.log.writeln("grunt-init: Create RESTful API Documentation with apidoc. (v" + pkg.version + ")");
 };
 
 // Version.

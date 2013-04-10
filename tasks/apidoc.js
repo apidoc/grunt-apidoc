@@ -1,6 +1,7 @@
 /*
  * grunt-apidoc
- * https://github.com/inveris/grunt-apidoc
+ * https://github.com/apidoc/grunt-apidoc
+ * http://apidocjs.com
  *
  * Copyright (c) 2013 inveris OHG
  * Author Peter Rottmann <rottmann@inveris.de>

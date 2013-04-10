@@ -1,4 +1,8 @@
 /**
+ * For Details and more examples visit http://apidocjs.com
+ */
+
+/**
  * @apiDefinePermission admin Admin access rights needed. 
  * Optionally you can write here further Informations about the permission.
  *

@@ -3,7 +3,7 @@
 This plugin requires Grunt `~0.4.0`
 
 ## About
-Generates a REST-API-Documentation with [apidoc](http://apidocjs.com).
+Generates a RESTful API Documentation with [apidoc](http://apidocjs.com).
 
 Generated example documentation at [http://apidocjs.com/example/](http://apidocjs.com/example/)
 
@@ -27,7 +27,7 @@ Use only one src and one dest, apidoc search in subdirs for files with apidoc-pa
 
 ### Additional options
 
-All `apidoc` options can be used within options-block, see [apidoc readme](https://github.com/inveris/apidoc/README.md) for details.
+All `apidoc` options can be used within options-block, see [apidoc readme](https://github.com/apidoc/apidoc/README.md) for details.
 
 **Example options:**
 
@@ -55,6 +55,6 @@ apidoc: {
 * `0.1.0` Initial release
 
 ## License
-Copyright (c) 2013 [inveris OHG](http://www.inveris.de)
-Author Peter Rottmann
+Copyright (c) 2013 inveris OHG
+Author Peter Rottmann <rottmann@inveris.de>
 Licensed under the MIT license.
