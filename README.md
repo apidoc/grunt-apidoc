@@ -52,7 +52,8 @@ apidoc: {
 
 ## Changelog
 
-* `0.1.0` Initial release
+* `0.1.1` Change binary Name.
+* `0.1.0` Initial release.
 
 ## License
 Copyright (c) 2013 inveris OHG
