@@ -1,6 +1,6 @@
 {
   "name": "grunt-apidoc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Grunt task to generate a RESTful API Documentation with apidoc",
   "author": "Peter Rottmann <rottmann@inveris.de>",
   "license": "MIT",
@@ -31,8 +31,10 @@
     "apidoc": "~0.1.5"
   },
   "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-contrib-jshint": "~0.4.1",
-    "grunt-contrib-clean": "~0.4.0"
+    "grunt-contrib-clean": "~0.4.1",
+    "grunt-contrib-jshint": "~0.4.3"
+  },
+  "peerDependencies": {
+    "grunt": "~0.4.1"
   }
 }

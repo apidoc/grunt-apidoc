@@ -27,7 +27,16 @@ Use only one src and one dest, apidoc search in subdirs for files with apidoc-pa
 
 ### Additional options
 
-All `apidoc` options can be used within options-block, see [apiDoc examples](http://apidocjs.com/#examples) for details.
+All `apidoc` options can be used within options-block, see [apiDoc configure](http://apidocjs.com/#configure) for details.
+
+* <code>src:</code> Source files directory.
+* <code>dest:</code> Destination directory, where the documentation will be created.
+* <code>template:</code> Directory with the template files.
+* <code>options</code>
+  * <code>includeFilters: [ ".*\\.js$" ]</code> RegEx, which files to parse.
+  * <code>debug: false</code> Show Debug Output.
+	* <code>log: true</code> Show Log Output.
+	* <code>simulate: false</code> Simulation, no files will be written.
 
 **Example options:**
 
@@ -52,6 +61,7 @@ apidoc: {
 
 ## Changelog
 
+* `0.1.2` Grunt peer dependencies.
 * `0.1.1` Change binary Name.
 * `0.1.0` Initial release.
 
