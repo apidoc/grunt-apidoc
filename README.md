@@ -27,7 +27,7 @@ Use only one src and one dest, apidoc search in subdirs for files with apidoc-pa
 
 ### Additional options
 
-All `apidoc` options can be used within options-block, see [apidoc readme](https://github.com/apidoc/apidoc/README.md) for details.
+All `apidoc` options can be used within options-block, see [apiDoc examples](http://apidocjs.com/#examples) for details.
 
 **Example options:**
 
