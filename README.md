@@ -53,7 +53,8 @@ apidoc: {
     dest: "apidoc/",
     options: {
       debug: true,
-      includeFilters: [ ".*\\.js$" ]
+      includeFilters: [ ".*\\.js$" ],
+      excludeFilters: [ "node_modules/" ]
     }
   }
 }
@@ -61,6 +62,7 @@ apidoc: {
 
 ## Changelog
 
+* `0.2.0` Update to apiDoc 0.2.0.
 * `0.1.2` Grunt peer dependencies.
 * `0.1.1` Change binary Name.
 * `0.1.0` Initial release.
