@@ -31,12 +31,12 @@ module.exports = function(grunt) {
 		if(typeof countFiles === "number")
 		{
 			grunt.log.ok("grunt-apidoc finished. Files with apidoc: " + countFiles);
-			this.async(true);
+			return true;
 		}
 		else
 		{
 			grunt.log.error("grunt-apidoc error: Execution terminated (set \"options { debug: true }\" in Gruntfile.js for details.");
-			this.async(false);
+			return false;
 		}
 	}); // registerMultiTask
 
