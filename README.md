@@ -62,6 +62,7 @@ apidoc: {
 
 ## Changelog
 
+* `0.2.1` remove this.async() (Iolo https://github.com/apidoc/grunt-apidoc/pull/2)
 * `0.2.0` Update to apiDoc 0.2.0.
 * `0.1.2` Grunt peer dependencies.
 * `0.1.1` Change binary Name.
