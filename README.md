@@ -66,6 +66,7 @@ apidoc: {
 
 ## Changelog
 
+* `0.5.0` Upgrade to apiDoc 0.5.x.
 * `0.4.0` Upgrade to apiDoc 0.4.x.
 * `0.3.0` Upgrade to apiDoc 0.3.x.
 * `0.2.1` remove this.async() (Iolo https://github.com/apidoc/grunt-apidoc/pull/2)
@@ -75,6 +76,6 @@ apidoc: {
 * `0.1.0` Initial release.
 
 ## License
-Copyright (c) 2013 inveris OHG
+Copyright (c) 2013-2014 inveris OHG
 Author Peter Rottmann <rottmann@inveris.de>
 Licensed under the MIT license.
