@@ -1,6 +1,6 @@
 # grunt-apidoc
 
-This plugin requires Grunt `~0.4.0`
+[![Build Status](https://travis-ci.org/apidoc/grunt-apidoc.svg?branch=master)](https://travis-ci.org/apidoc/grunt-apidoc)
 
 ## About
 Generates a RESTful API Documentation with [apiDoc](http://apidocjs.com).
