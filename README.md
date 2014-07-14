@@ -37,7 +37,7 @@ All `apiDoc` options can be used within options-block, see [apiDoc configure](ht
   * <code>debug: false</code> Show Debug Output.
 	* <code>log: true</code> Show Log Output.
 	* <code>simulate: false</code> Simulation, no files will be written.
-	* <code>markged { gfm: true }</code> marked (markdown) setting.
+	* <code>marked { gfm: true }</code> marked (markdown) setting.
 
 **Example options:**
 
