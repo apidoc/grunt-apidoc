@@ -1,7 +1,5 @@
 # grunt-apidoc
 
-This plugin requires Grunt `~0.4.0`
-
 ## About
 Generates a RESTful API Documentation with [apiDoc](http://apidocjs.com).
 
@@ -66,6 +64,7 @@ apidoc: {
 
 ## Changelog
 
+* `0.7.0` Upgrade to apiDoc 0.7.x.
 * `0.6.0` Upgrade to apiDoc 0.6.x.
 * `0.5.0` Upgrade to apiDoc 0.5.x.
 * `0.4.0` Upgrade to apiDoc 0.4.x.

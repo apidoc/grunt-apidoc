@@ -26,11 +26,11 @@ module.exports = function(grunt) {
 		options.template = config.template || config.t || options.t;
 
 		// Execute.
-		var countFiles = apidoc(options);
+		var result = apidoc(options);
 
-		if(typeof countFiles === "number")
+		if(result === true || result === 0)
 		{
-			grunt.log.ok("grunt-apidoc finished. Files with apidoc: " + countFiles);
+			grunt.log.ok("grunt-apidoc finished.");
 			return true;
 		}
 		else
