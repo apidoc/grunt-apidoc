@@ -77,7 +77,16 @@ apidoc: {
 * `0.1.1` Change binary Name.
 * `0.1.0` Initial release.
 
+
+## Help
+
+Please visit the main [apiDoc project page on github](https://github.com/apidoc/apidoc) for help and information.
+
+
 ## License
+
 Copyright (c) 2013-2014 inveris OHG
+
 Author Peter Rottmann <rottmann@inveris.de>
+
 Licensed under the MIT license.
