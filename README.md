@@ -66,6 +66,7 @@ apidoc: {
 
 ## Changelog
 
+* `0.8.0` Upgrade to apiDoc 0.8.x.
 * `0.7.0` Upgrade to apiDoc 0.7.x.
 * `0.6.0` Upgrade to apiDoc 0.6.x.
 * `0.5.0` Upgrade to apiDoc 0.5.x.
