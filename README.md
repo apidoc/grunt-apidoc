@@ -2,14 +2,17 @@
 
 [![Build Status](https://travis-ci.org/apidoc/grunt-apidoc.svg?branch=master)](https://travis-ci.org/apidoc/grunt-apidoc)
 
+
 ## About
 Generates a RESTful API Documentation with [apiDoc](http://apidocjs.com).
 
 Generated example documentation at [http://apidocjs.com/example/](http://apidocjs.com/example/)
 
+
 ## Installation
 1. `npm install grunt-apidoc --save-dev`
 2. Add `grunt.loadNpmTasks('grunt-apidoc');` to `Gruntfile.js`
+
 
 ## Configuration
 
@@ -24,6 +27,7 @@ apidoc: {
 ```
 
 Use only one src and one dest, apiDoc search in subdirs for files with apidoc-parameters.
+
 
 ### Additional options
 
@@ -64,8 +68,10 @@ apidoc: {
 }
 ```
 
+
 ## Changelog
 
+* `0.10.0` Upgrade to use always the latest version of apiDoc.
 * `0.9.0` Upgrade to apiDoc 0.9.x.
 * `0.8.0` Upgrade to apiDoc 0.8.x.
 * `0.7.0` Upgrade to apiDoc 0.7.x.
@@ -83,12 +89,3 @@ apidoc: {
 ## Help
 
 Please visit the main [apiDoc project page on github](https://github.com/apidoc/apidoc) for help and information.
-
-
-## License
-
-Copyright (c) 2013-2014 inveris OHG
-
-Author Peter Rottmann <rottmann@inveris.de>
-
-Licensed under the MIT license.

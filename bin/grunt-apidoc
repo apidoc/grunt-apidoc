@@ -1,40 +1,29 @@
 #!/usr/bin/env node
 
-"use strict";
+'use strict';
 
-/*
- * grunt-apidoc
- * https://github.com/apidoc/grunt-apidoc
- * http://apidocjs.com
- *
- * Copyright (c) 2013 inveris OHG
- * Author Peter Rottmann <rottmann@inveris.de>
- * Licensed under the MIT license.
- */
+// modules
+var path  = require('path');
+var grunt = require('grunt');
 
-// Modules.
-var path = require("path");
-var grunt = require("grunt");
+var basePath = path.resolve.bind(null, __dirname, '..');
 
-var basePath = path.resolve.bind(null, __dirname, "..");
+var pkg = require(basePath('package.json'));
 
-var pkg = require(basePath("package.json"));
+grunt.task.loadTasks(basePath('tasks'));
 
-grunt.task.loadTasks(basePath("tasks"));
-
-// Help.
+// help
 grunt.help.queue = [
-	"content"
+    'content'
 ];
 
 grunt.help.content = function() {
-  grunt.log.writeln("grunt-init: Create RESTful API Documentation with apidoc. (v" + pkg.version + ")");
+    grunt.log.writeln('grunt-init: Create RESTful API Documentation with apidoc. (v' + pkg.version + ')');
 };
 
-// Version.
+// version
 if(grunt.cli.options.version)
-  console.log("grunt-init v" + pkg.version);
-}
+    console.log('grunt-init v' + pkg.version);
 
-// Execute.
+// execute
 grunt.cli();
