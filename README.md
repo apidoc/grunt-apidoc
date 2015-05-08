@@ -39,9 +39,8 @@ All `apiDoc` options can be used within options-block, see [apiDoc configure](ht
 * <code>options</code>
   * <code>includeFilters: [ ".*\\.js$" ]</code> RegEx, which files to parse.
   * <code>debug: false</code> Show Debug Output.
-	* <code>log: true</code> Show Log Output.
-	* <code>simulate: false</code> Simulation, no files will be written.
-	* <code>marked { gfm: true }</code> marked (markdown) setting.
+  * <code>log: true</code> Show Log Output.
+  * <code>simulate: false</code> Simulation, no files will be written.
 
 **Example options:**
 
@@ -59,10 +58,7 @@ apidoc: {
     options: {
       debug: true,
       includeFilters: [ ".*\\.js$" ],
-      excludeFilters: [ "node_modules/" ],
-      marked: {
-        gfm: true
-      }
+      excludeFilters: [ "node_modules/" ]
     }
   }
 }
