@@ -31,7 +31,8 @@ Use only one src and one dest, apiDoc search in subdirs for files with apidoc-pa
 
 ### Additional options
 
-All `apiDoc` options can be used within options-block, see [apiDoc configure](http://apidocjs.com/#configure) for details.
+All `apiDoc` options can be used within options-block, see [apiDoc configure](http://apidocjs.com/#configure) for details,
+or look [directly at the code](https://github.com/apidoc/apidoc/blob/master/lib/index.js#L10-L22).
 
 * <code>src:</code> Source files directory.
 * <code>dest:</code> Destination directory, where the documentation will be created.
