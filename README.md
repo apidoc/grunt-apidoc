@@ -68,6 +68,7 @@ apidoc: {
 
 ## Changelog
 
+* `0.10.2` Update dependencies.
 * `0.10.1` Update dependencies.
 * `0.10.0` Upgrade to use always the latest version of apiDoc.
 * `0.9.0` Upgrade to apiDoc 0.9.x.
