@@ -41,6 +41,6 @@
     "npm-check-updates": "^2.5.8"
   },
   "peerDependencies": {
-    "grunt": "~0.4.0"
+    "grunt": ">=0.4.0"
   }
 }
