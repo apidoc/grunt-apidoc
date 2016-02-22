@@ -68,6 +68,7 @@ apidoc: {
 
 ## Changelog
 
+* `0.11.0` Update for Grunt 1.
 * `0.10.2` Update dependencies.
 * `0.10.1` Update dependencies.
 * `0.10.0` Upgrade to use always the latest version of apiDoc.
