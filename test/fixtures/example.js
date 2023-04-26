@@ -3,7 +3,7 @@
  */
 
 /**
- * @apiDefinePermission admin Admin access rights needed. 
+ * @apiDefinePermission admin Admin access rights needed.
  * Optionally you can write here further Informations about the permission.
  *
  * An "apiDefinePermission"-block can have an "apiVersion", so you can attach the block to a specific version.
@@ -24,16 +24,16 @@
  * @apiPermission admin
  *
  * @apiDescription Compare Verison 0.3.0 with 0.2.0 and you will see the green markers with new items in version 0.3.0 and red markers with removed items since 0.2.0.
- * 
+ *
  * @apiParam {String} id The Users-ID.
  *
  * @apiSuccess {String} id         The Users-ID.
- * @apiSuccess {Date}   registered Registration Date. 
+ * @apiSuccess {Date}   registered Registration Date.
  * @apiSuccess {Date}   name       Fullname of the User.
  *
  * @apiError NoAccessRight Only authenticated Admins can access the data.
  * @apiError UserNotFound   The <code>id</code> of the User was not found.
- * 
+ *
  * @apiErrorExample Response (example):
  *     HTTP/1.1 401 Not Authenticated
  *     {
@@ -80,10 +80,10 @@
 /**
  * @apiDefineErrorStructure CreateUser
  * @apiVersion 0.2.0
- * 
+ *
  * @apiError NoAccessRight Only authenticated Admins can access the data.
  * @apiError UserNameTooShort Minimum of 5 characters required.
- * 
+ *
  * @apiErrorExample  Response (example):
  *     HTTP/1.1 400 Bad Request
  *     {
@@ -100,7 +100,7 @@
  *
  * @apiDescription In this case "apiErrorStructure" is defined and used.
  * Define blocks with params that will be used in several functions, so you dont have to rewrite them.
- * 
+ *
  * @apiParam {String} name Name of the User.
  *
  * @apiSuccess {String} id         The new Users-ID.
@@ -117,7 +117,7 @@
  *
  * @apiDescription In this case "apiErrorStructure" is defined and used.
  * Define blocks with params that will be used in several functions, so you dont have to rewrite them.
- * 
+ *
  * @apiParam {String} name Name of the User.
  *
  * @apiSuccess {String} id         The Users-ID.

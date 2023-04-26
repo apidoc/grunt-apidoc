@@ -3,27 +3,26 @@
 'use strict';
 
 // modules
-var path  = require('path');
-var grunt = require('grunt');
+const path = require('path');
+const grunt = require('grunt');
 
-var basePath = path.resolve.bind(null, __dirname, '..');
+const basePath = path.resolve.bind(null, __dirname, '..');
 
-var pkg = require(basePath('package.json'));
+const pkg = require(basePath('package.json'));
 
 grunt.task.loadTasks(basePath('tasks'));
 
 // help
 grunt.help.queue = [
-    'content'
+  'content',
 ];
 
-grunt.help.content = function() {
-    grunt.log.writeln('grunt-init: Create RESTful API Documentation with apidoc. (v' + pkg.version + ')');
+grunt.help.content = function () {
+  grunt.log.writeln('grunt-init: Create RESTful API Documentation with apidoc. (v' + pkg.version + ')');
 };
 
 // version
-if(grunt.cli.options.version)
-    console.log('grunt-init v' + pkg.version);
+if (grunt.cli.options.version) { console.log('grunt-init v' + pkg.version); }
 
 // execute
 grunt.cli();

@@ -1,21 +1,20 @@
 'use strict';
 
-module.exports = function(grunt) {
-
+module.exports = function (grunt) {
   grunt.initConfig({
     jshint: {
       all: [
         'Gruntfile.js',
-        'tasks/**/*.js'
+        'tasks/**/*.js',
       ],
       options: {
-        jshintrc: '.jshintrc'
-      }
+        jshintrc: '.jshintrc',
+      },
     },
 
     // clear temporary dir
     clean: {
-      test: ['tmp']
+      test: ['tmp'],
     },
 
     // apidoc configuration
@@ -25,10 +24,10 @@ module.exports = function(grunt) {
         dest: 'tmp/',
         options: {
           debug: true,
-          includeFilters: [ '.*\\.js$' ]
-        }
-      }
-    }
+          includeFilters: ['.*\\.js$'],
+        },
+      },
+    },
 
   });
 
@@ -44,5 +43,4 @@ module.exports = function(grunt) {
 
   // Tasks: Test
   grunt.registerTask('test', ['clean', 'apidoc']);
-
 };
