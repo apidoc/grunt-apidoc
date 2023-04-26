@@ -2,16 +2,6 @@
 
 module.exports = function (grunt) {
   grunt.initConfig({
-    jshint: {
-      all: [
-        'Gruntfile.js',
-        'tasks/**/*.js',
-      ],
-      options: {
-        jshintrc: '.jshintrc',
-      },
-    },
-
     // clear temporary dir
     clean: {
       test: ['tmp'],
@@ -35,11 +25,7 @@ module.exports = function (grunt) {
   grunt.loadTasks('tasks');
 
   // Tasks
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-clean');
-
-  // Tasks: Default
-  grunt.registerTask('default', ['jshint']);
 
   // Tasks: Test
   grunt.registerTask('test', ['clean', 'apidoc']);
