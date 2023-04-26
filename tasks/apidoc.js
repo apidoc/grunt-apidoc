@@ -10,9 +10,9 @@ module.exports = function (grunt) {
     grunt.log.subhead('grunt-apidoc');
 
     // options
-    options.src = config.src || config.i || options.i;
-    options.dest = config.dest || config.o || options.o;
-    options.template = config.template || config.t || options.t;
+    options.src = config.src;
+    options.dest = config.dest;
+    options.template = config.template;
 
     // execute
     const result = apidoc.createDoc(options);
