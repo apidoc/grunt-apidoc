@@ -1,5 +1,12 @@
 # grunt-apidoc
 
+# Deprecation notice
+
+Grunt is from the past. Use a script in your package.json now to generate apidoc. This code is broken and won't get fixed.
+
+
+==========================
+
 ## About
 
 Use [Grunt](https://gruntjs.com/) to generate a RESTful API Documentation with [apiDoc](http://apidocjs.com).
